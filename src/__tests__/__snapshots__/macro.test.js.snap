@@ -2,7 +2,7 @@
 
 exports[`macros [gql] with fragment: [gql] with fragment 1`] = `
 
-import { gql } from 'graphql-tag.macro';
+import { gql } from 'graphql.macro';
 const userFragment = gql\`
   fragment UserEntry1 on User {
     firstName
@@ -133,7 +133,7 @@ const query = {
 
 exports[`macros [gql] without fragment: [gql] without fragment 1`] = `
 
-import { gql } from 'graphql-tag.macro';
+import { gql } from 'graphql.macro';
 const query = gql\`
   query User {
     user(id: 5) {
@@ -216,7 +216,7 @@ const query = {
 
 exports[`macros [loader] with fragment: [loader] with fragment 1`] = `
 
-import { loader } from 'graphql-tag.macro';
+import { loader } from 'graphql.macro';
 const query = loader('./fixtures/query1.graphql');
 
       ↓ ↓ ↓ ↓ ↓ ↓
@@ -369,7 +369,7 @@ const query = {
 
 exports[`macros [loader] without fragment: [loader] without fragment 1`] = `
 
-import { loader } from 'graphql-tag.macro';
+import { loader } from 'graphql.macro';
 const query = loader('./fixtures/query.graphql');
 
       ↓ ↓ ↓ ↓ ↓ ↓

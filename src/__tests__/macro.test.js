@@ -3,7 +3,7 @@ import plugin from 'babel-plugin-macros';
 
 expect.addSnapshotSerializer({
   print(val) {
-    return val.replace(/..\/macro/, 'graphql-tag.macro');
+    return val.replace(/..\/macro/, 'graphql.macro');
   },
   test(val) {
     return typeof val === 'string';

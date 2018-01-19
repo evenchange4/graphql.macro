@@ -19,13 +19,13 @@ function graphqlTagMacro({
 }): void {
   const { gql = [], loader = [] } = references;
 
-  // Case 1: import { gql } from 'graphql-tag.macro'.
+  // Case 1: import { gql } from 'graphql.macro'.
   gql.forEach(referencePath => {
     const compiled = compileWithFragment(referencePath, t);
     referencePath.parentPath.replaceWith(compiled);
   });
 
-  // Case 2: import { loader } from 'graphql-tag.macro'
+  // Case 2: import { loader } from 'graphql.macro'
   loader.forEach(referencePath => {
     referencePath.parentPath.node.arguments.forEach(({ value }) => {
       const queryPath = path.join(filename, '..', value);

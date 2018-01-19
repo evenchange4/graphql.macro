@@ -1,5 +1,5 @@
 {
-  "name": "@michaelhsu/graphql.macro",
+  "name": "graphql.macro",
   "version": "0.1.0",
   "description": "Compile GraphQL AST at build-time with babel-plugin-macros.",
   "author": "Michael Hsu <evenchange4@gmail.com>",
@@ -18,7 +18,7 @@
     "flow": "flow",
     "precommit": "lint-staged",
     "changelog":
-      "github-changes -o evenchange4 -r graphql-tag.macro -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+      "github-changes -o evenchange4 -r graphql.macro -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
     "babel-literal-to-ast": "2.0.0",
@@ -110,12 +110,12 @@
     "node": ">=9.0.0"
   },
   "bugs": {
-    "url": "https://github.com/evenchange4/graphql-tag.macro/issues",
+    "url": "https://github.com/evenchange4/graphql.macro/issues",
     "email": "evenchange4@gmail.com"
   },
-  "homepage": "https://github.com/evenchange4/graphql-tag.macro#readme",
+  "homepage": "https://github.com/evenchange4/graphql.macro#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evenchange4/graphql-tag.macro.git"
+    "url": "https://github.com/evenchange4/graphql.macro.git"
   }
 }
