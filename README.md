@@ -23,7 +23,25 @@ $ yarn add graphql.macro
 
 > Note: You'll also need to install and configure [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) if you haven't already.
 
+## Example
+
+[evenchange4/graphql.macro-example](https://github.com/evenchange4/graphql.macro-example) [[DEMO](https://graphqlmacro.netlify.com/)]
+
 ## Usage
+
+### `loader`
+
+```js
+import { loader } from 'graphql.macro';
+const query = loader('./fixtures/query.graphql');
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const query = {
+  "kind": "Document",
+  "definitions": [{
+    ...
+```
 
 ### `gql`
 
@@ -39,20 +57,6 @@ const query = gql`
     }
   }
 `;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const query = {
-  "kind": "Document",
-  "definitions": [{
-    ...
-```
-
-### `loader`
-
-```js
-import { loader } from 'graphql.macro';
-const query = loader('./fixtures/query.graphql');
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
