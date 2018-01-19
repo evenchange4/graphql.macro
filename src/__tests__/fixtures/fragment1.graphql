@@ -3,5 +3,5 @@ fragment UserEntry1 on User {
 }
 
 fragment UserEntry3 on User {
-  firstName
+  id
 }

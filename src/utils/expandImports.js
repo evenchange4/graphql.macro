@@ -2,6 +2,10 @@
 import path from 'path';
 import fs from 'fs';
 
+/**
+ * import .graphql file directly
+ * ref: https://github.com/apollographql/graphql-tag/blob/master/loader.js
+ */
 export default function expandImports(queryPath: string): string {
   const source = fs.readFileSync(queryPath, 'utf8');
   const lines = source.split(/\r\n|\r|\n/);

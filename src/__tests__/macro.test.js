@@ -17,21 +17,48 @@ pluginTester({
     filename: __filename,
   },
   tests: {
-    '[gql]': {
+    '[gql] without fragment': {
       error: false,
       code: `
         import { gql } from '../macro';
         const query = gql\`
-          {
+          query User {
             user(id: 5) {
-              firstName
               lastName
+              ...UserEntry1
             }
           }
         \`;
       `,
     },
-    '[loader]': {
+    '[gql] with fragment': {
+      error: false,
+      code: `
+        import { gql } from '../macro';
+        const userFragment = gql\`
+          fragment UserEntry1 on User {
+            firstName
+          }
+        \`;
+        const query = gql\`
+          query User {
+            user(id: 5) {
+              lastName
+              ...UserEntry1
+            }
+          }
+          $\{userFragment}
+        \`;
+      `,
+    },
+    '[loader] without fragment': {
+      error: false,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('./fixtures/query.graphql');
+      `,
+    },
+    '[loader] with fragment': {
       error: false,
       code: `
         import { loader } from '../macro';
