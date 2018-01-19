@@ -1,0 +1,7 @@
+fragment UserEntry1 on User {
+  firstName
+}
+
+fragment UserEntry3 on User {
+  firstName
+}

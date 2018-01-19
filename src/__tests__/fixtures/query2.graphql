@@ -1,0 +1,13 @@
+query User {
+  user(id: 5) {
+    firstName
+    lastName
+  }
+}
+
+query Post {
+  post(id: 1) {
+    id
+    title
+  }
+}

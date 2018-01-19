@@ -1,0 +1,9 @@
+#import "./fragment1.graphql"
+#import './fragment2.graphql'
+
+query User {
+  user(id: 5) {
+    ...UserEntry1
+    ...UserEntry2
+  }
+}
