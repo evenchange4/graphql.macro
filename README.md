@@ -70,7 +70,7 @@ const query = {
 
 * [Webpack preprocessing with graphql/loader](https://github.com/apollographql/graphql#webpack-preprocessing-with-graphqlloader)
 * [Babel preprocessing](https://github.com/apollographql/graphql#babel-preprocessing)
-* https://github.com/leoasis/graphql.macro
+* https://github.com/leoasis/graphql-tag.macro
 
 ## Development
 
