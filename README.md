@@ -21,11 +21,11 @@
 $ yarn add graphql.macro
 ```
 
-> Note: You'll also need to install and configure [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) if you haven't already.
+_Note: You'll need to install and configure [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) if you haven't already. (This can be omitted when using CRA [react-script@2.x](https://github.com/facebookincubator/create-react-app/issues/3815) .)_
 
 ## Example
 
-[evenchange4/graphql.macro-example](https://github.com/evenchange4/graphql.macro-example) [[DEMO](https://graphqlmacro.netlify.com/)]
+[evenchange4/graphql.macro-example (with react-script@2.x)](https://github.com/evenchange4/graphql.macro-example) [[DEMO](https://graphqlmacro.netlify.com/)]
 
 ## Usage
 
