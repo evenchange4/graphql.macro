@@ -8,7 +8,7 @@ import compileWithFragment from './utils/compileWithFragment';
 // import printAST from 'ast-pretty-print';
 // console.log(printAST(referencePath.parentPath))
 
-function graphqlTagMacro({
+function graphqlMacro({
   references,
   state: { file: { opts: { filename } } },
   babel: { types: t },
@@ -35,4 +35,4 @@ function graphqlTagMacro({
   });
 }
 
-export default createMacro(graphqlTagMacro);
+export default createMacro(graphqlMacro);

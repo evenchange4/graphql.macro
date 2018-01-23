@@ -17,6 +17,7 @@ before_install:
 script:
   - yarn run eslint
   - yarn run flow
+  - yarn run test
   - yarn run build
 
 after_success:
