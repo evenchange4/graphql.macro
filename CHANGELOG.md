@@ -1,5 +1,16 @@
 ## Change Log
 
+### v1.0.1 (2018/01/25 05:42 +00:00)
+
+* [2172bab](https://github.com/evenchange4/graphql.macro/commit/2172bab14c120de3d1f83e33ee412ee184b2a955) 1.0.1 (@evenchange4)
+* [fb673e5](https://github.com/evenchange4/graphql.macro/commit/fb673e5e1f362009dbc13cefa6ba0060cef8d080) fix(node): remove engines > 9 in package.json (@evenchange4)
+* [08fa280](https://github.com/evenchange4/graphql.macro/commit/08fa2808f1c5b01d74a2b66c9ba120399fe18d88) fix(CI): add test (@evenchange4)
+* [#4](https://github.com/evenchange4/graphql.macro/pull/4) chore(deps): update dependency eslint to v4.16.0 (#4) (@renovate[bot])
+* [4a12d5a](https://github.com/evenchange4/graphql.macro/commit/4a12d5ae8c4ba21e64af34e00e626b4893f63282) docs(README): make it more CRA-compatible #2 (@evenchange4)
+* [42dd526](https://github.com/evenchange4/graphql.macro/commit/42dd52687cb8c0eb81c22a2f99832a587fc9b93b) docs(README): typo #3 (@evenchange4)
+* [#1](https://github.com/evenchange4/graphql.macro/pull/1) Add renovate.json (#1) (@renovate[bot])
+* [fdfdfd9](https://github.com/evenchange4/graphql.macro/commit/fdfdfd919632fa12e70df23684ad72688f202427) docs(CHANGELOG): release 1.0.0 (@evenchange4)
+
 ### v1.0.0 (2018/01/19 19:31 +00:00)
 
 * [8191a24](https://github.com/evenchange4/graphql.macro/commit/8191a243dfedbfff9970dcd95372326459e05c54) 1.0.0 (@evenchange4)
