@@ -1,5 +1,13 @@
 ## Change Log
 
+### v1.0.2 (2018/01/25 15:49 +00:00)
+
+* [123aef9](https://github.com/evenchange4/graphql.macro/commit/123aef9160918ef6d8273e76fd04cfd06b24789e) 1.0.2 (@evenchange4)
+* [5d6f320](https://github.com/evenchange4/graphql.macro/commit/5d6f320f2f3c45a84de70b86d447961e424e5a33) fix(dependency): pinOnlyDevDependencies (@evenchange4)
+* [#7](https://github.com/evenchange4/graphql.macro/pull/7) chore(deps): update dependency eslint-plugin-flowtype to v2.41.1 (#7) (@renovate[bot])
+* [#8](https://github.com/evenchange4/graphql.macro/pull/8) chore(deps): update dependency flow-bin to v0.64.0 (#8) (@renovate[bot])
+* [78a7050](https://github.com/evenchange4/graphql.macro/commit/78a7050b1b70a79d728b2e0497b9d3deb3de0017) docs(CHANGELOG): release 1.0.1 (@evenchange4)
+
 ### v1.0.1 (2018/01/25 05:42 +00:00)
 
 * [2172bab](https://github.com/evenchange4/graphql.macro/commit/2172bab14c120de3d1f83e33ee412ee184b2a955) 1.0.1 (@evenchange4)
