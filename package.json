@@ -106,9 +106,6 @@
       "prettier/prettier": "error"
     }
   },
-  "engines": {
-    "node": ">=9.0.0"
-  },
   "bugs": {
     "url": "https://github.com/evenchange4/graphql.macro/issues",
     "email": "evenchange4@gmail.com"
