@@ -1,6 +1,6 @@
 {
   "name": "graphql.macro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compile GraphQL AST at build-time with babel-plugin-macros.",
   "author": "Michael Hsu <evenchange4@gmail.com>",
   "license": "MIT",
