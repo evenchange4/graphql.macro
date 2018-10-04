@@ -1,5 +1,6 @@
 // @flow
 import path from 'path';
+import fs from 'fs';
 import { createMacro } from 'babel-plugin-macros';
 import gqlTag from 'graphql-tag';
 import serialize from 'babel-literal-to-ast';
@@ -7,6 +8,10 @@ import expandImports from './utils/expandImports';
 import compileWithFragment from './utils/compileWithFragment';
 // import printAST from 'ast-pretty-print';
 // console.log(printAST(referencePath.parentPath))
+
+const cwd = fs.realpathSync(process.cwd());
+const resolvePathFromCwd = relativePath =>
+  path.resolve(cwd, process.env.NODE_PATH || '.', relativePath);
 
 function graphqlMacro({
   references,
@@ -28,7 +33,9 @@ function graphqlMacro({
   // Case 2: import { loader } from 'graphql.macro'
   loader.forEach(referencePath => {
     referencePath.parentPath.node.arguments.forEach(({ value }) => {
-      const queryPath = path.join(filename, '..', value);
+      const queryPath = value.startsWith('./')
+        ? path.join(filename, '..', value)
+        : resolvePathFromCwd(value);
       const expanded = expandImports(queryPath); // Note: #import feature
       referencePath.parentPath.replaceWith(serialize(gqlTag(expanded)));
     });
