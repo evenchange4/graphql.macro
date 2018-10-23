@@ -10,8 +10,19 @@ import compileWithFragment from './utils/compileWithFragment';
 // console.log(printAST(referencePath.parentPath))
 
 const cwd = fs.realpathSync(process.cwd());
-const resolvePathFromCwd = relativePath =>
-  path.resolve(cwd, process.env.NODE_PATH || '.', relativePath);
+const resolvePathFromCwd = relativePath => {
+  let resolvedPath = path.resolve(
+    cwd,
+    process.env.NODE_PATH || '.',
+    relativePath,
+  );
+  return fs.exists(resolvedPath, function(exists) {
+    if (exists) {
+      return resolvedPath;
+    }
+    return path.resolve(cwd, 'node_modules', relativePath);
+  });
+};
 
 function graphqlMacro({
   references,
