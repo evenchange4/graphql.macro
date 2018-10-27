@@ -16,7 +16,7 @@ const resolvePathFromCwd = relativePath => {
     process.env.NODE_PATH || '.',
     relativePath,
   );
-  return fs.exists(resolvedPath, (exists) => {
+  return fs.exists(resolvedPath, exists => {
     if (exists) {
       return resolvedPath;
     }
