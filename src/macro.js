@@ -11,12 +11,12 @@ import compileWithFragment from './utils/compileWithFragment';
 
 const cwd = fs.realpathSync(process.cwd());
 const resolvePathFromCwd = relativePath => {
-  let resolvedPath = path.resolve(
+  const resolvedPath = path.resolve(
     cwd,
     process.env.NODE_PATH || '.',
     relativePath,
   );
-  return fs.exists(resolvedPath, function(exists) {
+  return fs.exists(resolvedPath, (exists) => {
     if (exists) {
       return resolvedPath;
     }
