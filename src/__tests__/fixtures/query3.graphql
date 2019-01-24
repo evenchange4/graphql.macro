@@ -1,0 +1,8 @@
+#import './fragment3.graphql'
+
+query User {
+  user(id: 5) {
+    ...UserEntry4
+  }
+}
+

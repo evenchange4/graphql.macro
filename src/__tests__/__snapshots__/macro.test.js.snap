@@ -471,6 +471,183 @@ const query = {
 
 `;
 
+exports[`macros [loader] with nested circular fragments: [loader] with nested circular fragments 1`] = `
+
+import { loader } from 'graphql.macro';
+const query = loader('./fixtures/query3.graphql');
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const query = {
+  "kind": "Document",
+  "definitions": [{
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "UserEntry1"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "User"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "firstName"
+        },
+        "arguments": [],
+        "directives": []
+      }]
+    }
+  }, {
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "UserEntry3"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "User"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "id"
+        },
+        "arguments": [],
+        "directives": []
+      }]
+    }
+  }, {
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "UserEntry5"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "User"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "FragmentSpread",
+        "name": {
+          "kind": "Name",
+          "value": "UserEntry4"
+        },
+        "directives": []
+      }]
+    }
+  }, {
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "UserEntry4"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "User"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "FragmentSpread",
+        "name": {
+          "kind": "Name",
+          "value": "UserEntry1"
+        },
+        "directives": []
+      }, {
+        "kind": "FragmentSpread",
+        "name": {
+          "kind": "Name",
+          "value": "UserEntry5"
+        },
+        "directives": []
+      }]
+    }
+  }, {
+    "kind": "OperationDefinition",
+    "operation": "query",
+    "name": {
+      "kind": "Name",
+      "value": "User"
+    },
+    "variableDefinitions": [],
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "user"
+        },
+        "arguments": [{
+          "kind": "Argument",
+          "name": {
+            "kind": "Name",
+            "value": "id"
+          },
+          "value": {
+            "kind": "IntValue",
+            "value": "5"
+          }
+        }],
+        "directives": [],
+        "selectionSet": {
+          "kind": "SelectionSet",
+          "selections": [{
+            "kind": "FragmentSpread",
+            "name": {
+              "kind": "Name",
+              "value": "UserEntry4"
+            },
+            "directives": []
+          }]
+        }
+      }]
+    }
+  }],
+  "loc": {
+    "start": 0,
+    "end": 371,
+    "source": {
+      "body": "fragment UserEntry1 on User {\\n  firstName\\n}\\n\\nfragment UserEntry3 on User {\\n  id\\n}\\n#import \\"./fragment3.graphql\\"\\n\\nfragment UserEntry5 on User {\\n  ...UserEntry4\\n}\\n#import \\"./fragment1.graphql\\"\\n#import \\"./fragment4.graphql\\"\\n\\nfragment UserEntry4 on User {\\n  ...UserEntry1\\n  ...UserEntry5\\n}\\n#import './fragment3.graphql'\\n\\nquery User {\\n  user(id: 5) {\\n    ...UserEntry4\\n  }\\n}\\n\\n",
+      "name": "GraphQL request",
+      "locationOffset": {
+        "line": 1,
+        "column": 1
+      }
+    }
+  }
+};
+
+`;
+
 exports[`macros [loader] without fragment: [loader] without fragment 1`] = `
 
 import { loader } from 'graphql.macro';

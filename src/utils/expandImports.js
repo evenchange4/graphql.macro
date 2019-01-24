@@ -6,7 +6,10 @@ import fs from 'fs';
  * import .graphql file directly
  * ref: https://github.com/apollographql/graphql-tag/blob/master/loader.js
  */
-export default function expandImports(queryPath: string): string {
+export default function expandImports(
+  queryPath: string,
+  processedFiles: Set<string> = new Set(),
+): string {
   const source = fs.readFileSync(queryPath, 'utf8');
   const lines = source.split(/\r\n|\r|\n/);
   const importContent = lines
@@ -17,7 +20,13 @@ export default function expandImports(queryPath: string): string {
         .split(' ')[1]
         .replace(/('|")/g, '');
       const relativeQueryPath = path.join(queryPath, '..', value);
-      const raw = fs.readFileSync(relativeQueryPath, 'utf8');
+
+      if (processedFiles.has(relativeQueryPath)) {
+        return '';
+      }
+
+      processedFiles.add(relativeQueryPath);
+      const raw = expandImports(relativeQueryPath, processedFiles);
 
       return raw;
     })
