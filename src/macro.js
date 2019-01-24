@@ -11,17 +11,23 @@ import compileWithFragment from './utils/compileWithFragment';
 
 const cwd = fs.realpathSync(process.cwd());
 const resolvePathFromCwd = relativePath => {
-  const resolvedPath = path.resolve(
+  let resolvedPath = path.resolve(
     cwd,
     process.env.NODE_PATH || '.',
     relativePath,
   );
-  return fs.exists(resolvedPath, exists => {
-    if (exists) {
-      return resolvedPath;
-    }
-    return path.resolve(cwd, 'node_modules', relativePath);
-  });
+  if (fs.existsSync(resolvedPath)) {
+    return resolvedPath;
+  }
+
+  // Note: Try to resolve from node_modules if the file does not exist. PR#39
+  resolvedPath = path.resolve(cwd, 'node_modules', relativePath);
+  // Note: double check if the file exist in node_modules.
+  if (!fs.existsSync(resolvedPath)) {
+    throw new Error(`The ${relativePath} file does not exist.`);
+  }
+
+  return resolvedPath;
 };
 
 function graphqlMacro({
