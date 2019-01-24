@@ -37,7 +37,7 @@
     "babel-eslint": "8.2.1",
     "babel-jest": "22.1.0",
     "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-tester": "5.0.0",
+    "babel-plugin-tester": "5.5.2",
     "codecov": "3.0.0",
     "eslint": "4.16.0",
     "eslint-config-airbnb-base": "12.1.0",
