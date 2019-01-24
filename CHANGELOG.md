@@ -1,5 +1,10 @@
 ## Unreleased (2019-01-24)
 
+## 1.3.0 (2019-01-24)
+
+- 1.3.0 ([cbbe5d3](https://github.com/evenchange4/graphql.macro/commit/cbbe5d3))
+- refactor(utils): extract resolveImportPath function (#51) ([fc64d54](https://github.com/evenchange4/graphql.macro/commit/fc64d54)), closes [#51](https://github.com/evenchange4/graphql.macro/issues/51)
+- chore(deps): keep npm and scipts up-to-date (#50) ([261a259](https://github.com/evenchange4/graphql.macro/commit/261a259)), closes [#50](https://github.com/evenchange4/graphql.macro/issues/50)
 - docs(CHANGELOG): release 1.2.0 ([625eb79](https://github.com/evenchange4/graphql.macro/commit/625eb79))
 
 ## 1.2.0 (2019-01-24)
