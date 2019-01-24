@@ -1,28 +1,14 @@
 // @flow
-import path from 'path';
-import fs from 'fs';
 import { createMacro } from 'babel-plugin-macros';
 import gqlTag from 'graphql-tag';
 import serialize from 'babel-literal-to-ast';
-import expandImports from './utils/expandImports';
-import compileWithFragment from './utils/compileWithFragment';
+import {
+  expandImports,
+  compileWithFragment,
+  resolveImportPath,
+} from './utils/index';
 // import printAST from 'ast-pretty-print';
 // console.log(printAST(referencePath.parentPath))
-
-const cwd = fs.realpathSync(process.cwd());
-const resolvePathFromCwd = (relativePath: string) => {
-  const resolvedPath = path.resolve(
-    cwd,
-    process.env.NODE_PATH || '.',
-    relativePath,
-  );
-  if (fs.existsSync(resolvedPath)) {
-    return resolvedPath;
-  }
-
-  // Note: Try to resolve from node_modules if the file does not exist. PR#39
-  return path.resolve(cwd, 'node_modules', relativePath);
-};
 
 function graphqlMacro({
   references,
@@ -48,10 +34,8 @@ function graphqlMacro({
   // Case 2: import { loader } from 'graphql.macro'
   loader.forEach(referencePath => {
     referencePath.parentPath.node.arguments.forEach(({ value }) => {
-      const queryPath = value.startsWith('./')
-        ? path.join(filename, '..', value)
-        : resolvePathFromCwd(value);
-      const expanded = expandImports(queryPath); // Note: #import feature
+      const absolutePath = resolveImportPath({ filename, relativePath: value });
+      const expanded = expandImports(absolutePath); // Note: #import feature
       referencePath.parentPath.replaceWith(serialize(gqlTag(expanded)));
     });
   });
