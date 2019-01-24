@@ -1,0 +1,5 @@
+#import "./fragment3.graphql"
+
+fragment UserEntry5 on User {
+  ...UserEntry4
+}
