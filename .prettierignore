@@ -1,0 +1,8 @@
+lib/
+es/
+
+# flow
+flow-typed/
+
+# test
+coverage/

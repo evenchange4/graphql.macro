@@ -1,4 +1,6 @@
 [ignore]
+<PROJECT_ROOT>/es/.*
+<PROJECT_ROOT>/lib/.*
 
 [include]
 

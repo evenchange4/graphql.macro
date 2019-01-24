@@ -26,7 +26,11 @@ const resolvePathFromCwd = (relativePath: string) => {
 
 function graphqlMacro({
   references,
-  state: { file: { opts: { filename } } },
+  state: {
+    file: {
+      opts: { filename },
+    },
+  },
   babel: { types: t },
 }: {
   references: { gql: Array<any>, loader: Array<any> },

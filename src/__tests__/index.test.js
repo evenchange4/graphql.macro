@@ -1,3 +1,5 @@
+// @flow
+
 import macro from '../macro';
 import index from '../index';
 
