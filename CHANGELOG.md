@@ -1,5 +1,15 @@
 ## Change Log
 
+### v1.1.0 (2019/01/24 01:10 +00:00)
+
+* [c2537ca](https://github.com/evenchange4/graphql.macro/commit/c2537ca40d24825a566a082060e085cda4489f6a) 1.1.0 (@evenchange4)
+* [1bd78e5](https://github.com/evenchange4/graphql.macro/commit/1bd78e5008d65faf807a6463ee0a93085b501588) chore(travis): update release key (@evenchange4)
+* [#42](https://github.com/evenchange4/graphql.macro/pull/42) feat(Imports): Recursive imports processing (#42) (@msimulcik)
+* [#11](https://github.com/evenchange4/graphql.macro/pull/11) chore(deps): update babel monorepo packages to v7.0.0-beta.39 (#11) (@renovate[bot])
+* [#12](https://github.com/evenchange4/graphql.macro/pull/12) chore(deps): update dependency eslint-plugin-prettier to v2.6.0 (#12) (@renovate[bot])
+* [#10](https://github.com/evenchange4/graphql.macro/pull/10) chore(deps): update dependency lint-staged to v6.1.0 (#10) (@renovate[bot])
+* [9319dce](https://github.com/evenchange4/graphql.macro/commit/9319dcebeef3f5d68fe5a2bcd71d1d581591c4c2) docs(CHANGELOG): release 1.0.2 (@evenchange4)
+
 ### v1.0.2 (2018/01/25 15:49 +00:00)
 
 * [123aef9](https://github.com/evenchange4/graphql.macro/commit/123aef9160918ef6d8273e76fd04cfd06b24789e) 1.0.2 (@evenchange4)
