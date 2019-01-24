@@ -82,6 +82,13 @@ pluginTester({
         process.env.NODE_PATH = 'src/';
       },
     },
+    '[loader] with nested circular fragments': {
+      error: false,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('./fixtures/query3.graphql');
+      `,
+    },
     // '[loader] multiple operations': {
     //   error: false,
     //   code: `
