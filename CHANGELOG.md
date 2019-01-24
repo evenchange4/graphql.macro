@@ -1,5 +1,13 @@
 ## Change Log
 
+### v1.2.0 (2019/01/24 02:12 +00:00)
+
+* [fdfa739](https://github.com/evenchange4/graphql.macro/commit/fdfa739a6f61880321fd6a2f7b1c54810efeb202) 1.2.0 (@evenchange4)
+* [#47](https://github.com/evenchange4/graphql.macro/pull/47) feat(import): Support node module imports for monorepo (#47) (@evenchange4)
+* [#37](https://github.com/evenchange4/graphql.macro/pull/37) feat(import path): Support absolute paths and NODE_PATH (#37) (@vinhlh)
+* [#38](https://github.com/evenchange4/graphql.macro/pull/38) tests(index): Make test number fancy (#38) (@vinhlh)
+* [75bfec2](https://github.com/evenchange4/graphql.macro/commit/75bfec25875e6c0aa2893d385ba85651b1c16267) docs(CHANGELOG): release 1.1.0 (@evenchange4)
+
 ### v1.1.0 (2019/01/24 01:10 +00:00)
 
 * [c2537ca](https://github.com/evenchange4/graphql.macro/commit/c2537ca40d24825a566a082060e085cda4489f6a) 1.1.0 (@evenchange4)
