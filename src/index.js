@@ -1,4 +1,3 @@
 // @flow
-import macro from './macro';
-
-export default macro;
+export * from './utils/index';
+export { default } from './macro';
