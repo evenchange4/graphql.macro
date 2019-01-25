@@ -1,4 +1,11 @@
-## Unreleased (2019-01-24)
+## Unreleased (2019-01-25)
+
+## <small>1.3.1 (2019-01-25)</small>
+
+- 1.3.1 ([9fe1589](https://github.com/evenchange4/graphql.macro/commit/9fe1589))
+- fix(resolveImportPath): should work with relative path issue #52 (#54) ([3dad22f](https://github.com/evenchange4/graphql.macro/commit/3dad22f)), closes [#52](https://github.com/evenchange4/graphql.macro/issues/52) [#54](https://github.com/evenchange4/graphql.macro/issues/54)
+- chore(deps): update dependency jest to v24.0.0-alpha.15 (#53) ([aaa58c6](https://github.com/evenchange4/graphql.macro/commit/aaa58c6)), closes [#53](https://github.com/evenchange4/graphql.macro/issues/53)
+- docs(CHANGELOG): release 1.3.0 ([21d7409](https://github.com/evenchange4/graphql.macro/commit/21d7409))
 
 ## 1.3.0 (2019-01-24)
 
