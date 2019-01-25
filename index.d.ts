@@ -1,0 +1,4 @@
+import { DocumentNode } from 'graphql';
+
+export function loader(path: string): DocumentNode;
+export function gql(path: TemplateStringsArray): DocumentNode;

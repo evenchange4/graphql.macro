@@ -3,6 +3,7 @@
   "version": "1.3.2",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "index.d.ts",
   "sideEffects": false,
   "files": [
     "es",
