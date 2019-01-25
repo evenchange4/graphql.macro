@@ -91,6 +91,13 @@ pluginTester({
         const query = loader('./fixtures/query3.graphql');
       `,
     },
+    '[loader] should work with relative path issue#52': {
+      error: false,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('../__tests__/fixtures/query.graphql');
+      `,
+    },
     // '[loader] multiple operations': {
     //   error: false,
     //   code: `
