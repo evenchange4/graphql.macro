@@ -11,7 +11,7 @@ const resolveImportPath = ({
   filename: string,
   relativePath: string,
 }): string => {
-  if (relativePath.startsWith('./')) {
+  if (relativePath.startsWith('.')) {
     return path.join(filename, '..', relativePath);
   }
 
