@@ -1,5 +1,11 @@
 ## Unreleased (2019-01-25)
 
+## <small>1.3.2 (2019-01-25)</small>
+
+- 1.3.2 ([155a004](https://github.com/evenchange4/graphql.macro/commit/155a004))
+- feat(flow): This is a workaround for flow type to work. (#55) ([a733460](https://github.com/evenchange4/graphql.macro/commit/a733460)), closes [#55](https://github.com/evenchange4/graphql.macro/issues/55)
+- docs(CHANGELOG): release 1.3.1 ([7d7c48d](https://github.com/evenchange4/graphql.macro/commit/7d7c48d))
+
 ## <small>1.3.1 (2019-01-25)</small>
 
 - 1.3.1 ([9fe1589](https://github.com/evenchange4/graphql.macro/commit/9fe1589))
