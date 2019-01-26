@@ -1,4 +1,12 @@
-## Unreleased (2019-01-25)
+## Unreleased (2019-01-26)
+
+## <small>1.3.3 (2019-01-26)</small>
+
+- 1.3.3 ([ef51618](https://github.com/evenchange4/graphql.macro/commit/ef51618))
+- chore(deps): update dependency jest to v24.0.0 (#57) ([3640743](https://github.com/evenchange4/graphql.macro/commit/3640743)), closes [#57](https://github.com/evenchange4/graphql.macro/issues/57)
+- chore(travis): use node 11.8.0 ([d3fa015](https://github.com/evenchange4/graphql.macro/commit/d3fa015))
+- feat(ts): Add typescript types (#56) ([99d0484](https://github.com/evenchange4/graphql.macro/commit/99d0484)), closes [#56](https://github.com/evenchange4/graphql.macro/issues/56)
+- docs(CHANGELOG): release 1.3.2 ([2958e42](https://github.com/evenchange4/graphql.macro/commit/2958e42))
 
 ## <small>1.3.2 (2019-01-25)</small>
 
