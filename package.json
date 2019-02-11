@@ -15,7 +15,7 @@
     "test": "NODE_ENV='test' jest --coverage",
     "test:watch": "npm run test -- --watch",
     "flow": "flow",
-    "flow-coverage": "hsu-scripts flow --threshold 66",
+    "flow-coverage": "hsu-scripts flow --threshold 71",
     "eslint": "eslint ./",
     "format": "prettier --write '**/*.{js,json,md,css,yaml,yml}' '*.{js,json,md,css,yaml,yml}'",
     "changelog": "conventional-changelog --infile ./CHANGELOG.md --same-file --release-count 0 --output-unreleased"
@@ -48,7 +48,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/lib/",
-      "<rootDir>/es/"
+      "<rootDir>/es/",
+      "<rootDir>/src/__tests__/flow.test.js"
     ],
     "resetMocks": true,
     "resetModules": true
