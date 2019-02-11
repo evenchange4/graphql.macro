@@ -2235,10 +2235,10 @@ eslint-config-airbnb@^17.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-prettier@^3.3.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.6.0.tgz#8ca3ffac4bd6eeef623a0651f9d754900e3ec217"
-  integrity sha512-ixJ4U3uTLXwJts4rmSVW/lMXjlGwCijhBJHk8iVqKKSifeI0qgFEfWl8L63isfc8Od7EiBALF6BX3jKLluf/jQ==
+eslint-config-prettier@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.0.0.tgz#16cedeea0a56e74de60dcbbe3be0ab2c645405b9"
+  integrity sha512-kWuiJxzV5NwOwZcpyozTzDT5KJhBw292bbYro9Is7BWnbNMg15Gmpluc1CTetiCatF8DRkNvgPAOaSyg+bYr3g==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -2307,10 +2307,10 @@ eslint-plugin-prettier@^3.0.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-0.0.0.tgz#9988f14082a159931c3dfa9ba699130457da927a"
-  integrity sha512-SXyU7C3E8AJbXKMdb10P/zHazcxzfuWR5OFwAVZKXVU7P/H56NLszVG6WdQBo9Pt80FfnPXtUGGbWhs3/98N4w==
+eslint-plugin-react-hooks@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.0.1.tgz#76b6fb4edafab02eab0090078977687157605dd9"
+  integrity sha512-yNhvY7EFBp0mq0Bt8BHoS57GwJ4e1qSYdvDFSfPnjmiSmyGUfQFQGcQs4K0JQFDGopWkURWq58psbUJIhWZ2Kg==
 
 eslint-plugin-react@^7.12.3:
   version "7.12.4"
@@ -3119,10 +3119,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
   integrity sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
 
-hsu-scripts@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/hsu-scripts/-/hsu-scripts-1.0.2.tgz#28cfdda2e8f58749e9fff0646e815c8d2e835cd8"
-  integrity sha512-0bGD4xZRj6EJ5V1Xl9PIVdNV0bsMpXxv2Ixc9Ko+iWBzmsu36u51GcXx7LtNs1VYwgWUf63PNgXSxmvtTxSibQ==
+hsu-scripts@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/hsu-scripts/-/hsu-scripts-1.0.5.tgz#524af162f6523fddd24f2de39a578984b1db50af"
+  integrity sha512-anAogMZytE2i1LyTN+GhXqCSmTYImPmIbXEPtq8iBzgFdV5HOiJIUGSxTe/fgL4OWRytKgAa1sPnMDejhu5edA==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.2.2"
@@ -3139,14 +3139,14 @@ hsu-scripts@1.0.2:
     babel-plugin-transform-react-remove-prop-types "^0.4.21"
     chalk "^2.4.2"
     eslint-config-airbnb "^17.1.0"
-    eslint-config-prettier "^3.3.0"
+    eslint-config-prettier "^4.0.0"
     eslint-plugin-flowtype "^3.2.0"
     eslint-plugin-import "^2.14.0"
     eslint-plugin-jest "^22.1.2"
     eslint-plugin-jsx-a11y "^6.1.2"
     eslint-plugin-prettier "^3.0.1"
     eslint-plugin-react "^7.12.3"
-    eslint-plugin-react-hooks "0.0.0"
+    eslint-plugin-react-hooks "1.0.1"
     execa "^1.0.0"
     flow-copy-source "^2.0.2"
     flow-coverage-report "^0.6.1"
