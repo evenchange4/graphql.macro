@@ -1,4 +1,13 @@
-## Unreleased (2019-01-26)
+## Unreleased (2019-02-11)
+
+## <small>1.3.4 (2019-02-11)</small>
+
+- 1.3.4 ([eee5295](https://github.com/evenchange4/graphql.macro/commit/eee5295))
+- fix(flow): add flowtype tests (#67) ([74cebd3](https://github.com/evenchange4/graphql.macro/commit/74cebd3)), closes [#67](https://github.com/evenchange4/graphql.macro/issues/67)
+- chore(deps): ncu update ([912ace6](https://github.com/evenchange4/graphql.macro/commit/912ace6))
+- chore(deps): update dependency lint-staged to v8.1.1 (#58) ([9b41ca6](https://github.com/evenchange4/graphql.macro/commit/9b41ca6)), closes [#58](https://github.com/evenchange4/graphql.macro/issues/58)
+- chore(deps): update dependency prettier to v1.16.2 (#59) ([9720495](https://github.com/evenchange4/graphql.macro/commit/9720495)), closes [#59](https://github.com/evenchange4/graphql.macro/issues/59)
+- docs(CHANGELOG): release 1.3.3 ([1f45026](https://github.com/evenchange4/graphql.macro/commit/1f45026))
 
 ## <small>1.3.3 (2019-01-26)</small>
 
