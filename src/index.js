@@ -13,4 +13,5 @@ export type TemplateStringsArray = $ReadOnlyArray<string>;
 export const loader = (filePath: string): DocumentNode => ({}: DocumentNode);
 export const gql = (
   taggedTemplateLiteral: TemplateStringsArray,
+  ...placeholders: any[]
 ): DocumentNode => ({}: DocumentNode);
