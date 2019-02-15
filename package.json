@@ -21,14 +21,13 @@
     "changelog": "conventional-changelog --infile ./CHANGELOG.md --same-file --release-count 0 --output-unreleased"
   },
   "dependencies": {
-    "babel-literal-to-ast": "^2.0.0",
+    "babel-literal-to-ast": "^2.1.0",
     "babel-plugin-macros": "^2.5.0",
     "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
     "ast-pretty-print": "2.0.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-plugin-tester": "5.5.2",
+    "babel-plugin-tester": "6.0.0",
     "codecov": "3.2.0",
     "conventional-changelog-cli": "2.0.12",
     "eslint": "5.13.0",
