@@ -71,7 +71,7 @@ const query = {
 
 ### Requirements
 
-- node >= 11.9.0
+- node >= 11.10.0
 - yarn >= 1.13.0
 
 ```sh
