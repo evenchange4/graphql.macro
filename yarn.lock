@@ -3173,10 +3173,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
   integrity sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
 
-hsu-scripts@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/hsu-scripts/-/hsu-scripts-1.0.6.tgz#7890dd402b46852ff7bc6bed88daf3cd32bd2ee6"
-  integrity sha512-NrcP22/EqiMxtgBkue/EnFbiLftXut4onDgiA023FMFDVlgn9EKot6SOonK/ntx0AruBuQNw+xfe4V2LCRb8lw==
+hsu-scripts@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/hsu-scripts/-/hsu-scripts-1.0.7.tgz#0a268b12524b06c84269a810e8ac762be5359047"
+  integrity sha512-fygkCO4F+1VokWziNADUwwMWq4vS4zY6tY0agq7nfros335Sl/BRB4B9pdiKBPj9SvstT8saZL/v2JeExaugng==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.3.3"
