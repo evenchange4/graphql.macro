@@ -1,4 +1,20 @@
-## Unreleased (2019-02-11)
+## Unreleased (2019-02-25)
+
+## <small>1.3.5 (2019-02-25)</small>
+
+- 1.3.5 ([76da1af](https://github.com/evenchange4/graphql.macro/commit/76da1af))
+- chore(deps): remove babel bridge (#73) ([0f8a61a](https://github.com/evenchange4/graphql.macro/commit/0f8a61a)), closes [#73](https://github.com/evenchange4/graphql.macro/issues/73)
+- chore(deps): update dependency codecov to v3.2.0 (#68) ([f9a55f3](https://github.com/evenchange4/graphql.macro/commit/f9a55f3)), closes [#68](https://github.com/evenchange4/graphql.macro/issues/68)
+- chore(deps): update dependency conventional-changelog-cli to v2.0.12 (#72) ([b547df2](https://github.com/evenchange4/graphql.macro/commit/b547df2)), closes [#72](https://github.com/evenchange4/graphql.macro/issues/72)
+- chore(deps): update dependency eslint to v5.14.0 (#74) ([058a3e3](https://github.com/evenchange4/graphql.macro/commit/058a3e3)), closes [#74](https://github.com/evenchange4/graphql.macro/issues/74)
+- chore(deps): update dependency eslint to v5.14.1 (#75) ([0176afc](https://github.com/evenchange4/graphql.macro/commit/0176afc)), closes [#75](https://github.com/evenchange4/graphql.macro/issues/75)
+- chore(deps): update dependency flow-bin to v0.93.0 (#69) ([aebe0b0](https://github.com/evenchange4/graphql.macro/commit/aebe0b0)), closes [#69](https://github.com/evenchange4/graphql.macro/issues/69)
+- chore(deps): update dependency hsu-scripts to v1.0.6 (#76) ([d5a50c7](https://github.com/evenchange4/graphql.macro/commit/d5a50c7)), closes [#76](https://github.com/evenchange4/graphql.macro/issues/76)
+- chore(deps): update dependency hsu-scripts to v1.0.7 (#77) ([c2b34a1](https://github.com/evenchange4/graphql.macro/commit/c2b34a1)), closes [#77](https://github.com/evenchange4/graphql.macro/issues/77)
+- chore(deps): update dependency lint-staged to v8.1.4 (#70) ([98706bc](https://github.com/evenchange4/graphql.macro/commit/98706bc)), closes [#70](https://github.com/evenchange4/graphql.macro/issues/70)
+- chore(flow): sync type definitions with ts ([434fa31](https://github.com/evenchange4/graphql.macro/commit/434fa31))
+- fix(ts): Update typings to allow additional DocumentNode (#78) ([3e03041](https://github.com/evenchange4/graphql.macro/commit/3e03041)), closes [#78](https://github.com/evenchange4/graphql.macro/issues/78)
+- docs(CHANGELOG): release 1.3.4 ([871149e](https://github.com/evenchange4/graphql.macro/commit/871149e))
 
 ## <small>1.3.4 (2019-02-11)</small>
 
