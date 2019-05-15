@@ -2,6 +2,8 @@
 
 import pluginTester from 'babel-plugin-tester';
 import plugin from 'babel-plugin-macros';
+import fs from 'fs';
+import path from 'path';
 
 expect.addSnapshotSerializer({
   print(val) {
@@ -82,6 +84,25 @@ pluginTester({
       `,
       setup: () => {
         process.env.NODE_PATH = 'src/';
+      },
+    },
+    '[loader] with absolute path and jsconfig include property': {
+      error: false,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('__tests__/fixtures/simpleFragment.graphql');
+      `,
+      setup: () => {
+        fs.symlinkSync(
+          'src/__tests__/fixtures/jsconfig.json',
+          path.resolve(fs.realpathSync(process.cwd()), 'jsconfig.json'),
+          'file',
+        );
+      },
+      teardown: () => {
+        fs.unlinkSync(
+          path.resolve(fs.realpathSync(process.cwd()), 'jsconfig.json'),
+        );
       },
     },
     '[loader] with nested circular fragments': {
