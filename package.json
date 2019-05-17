@@ -21,6 +21,7 @@
     "changelog": "conventional-changelog --infile ./CHANGELOG.md --same-file --release-count 0 --output-unreleased"
   },
   "dependencies": {
+    "@babel/template": "^7.4.4",
     "babel-literal-to-ast": "^2.1.0",
     "babel-plugin-macros": "^2.5.0",
     "graphql-tag": "^2.10.1"

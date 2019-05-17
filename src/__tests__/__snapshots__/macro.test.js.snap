@@ -1,5 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`macros [gql] should handle duplicated fragments (issue#90): [gql] should handle duplicated fragments (issue#90) 1`] = `
+
+import { gql } from 'graphql.macro';
+const frag1 = gql\`fragment TestDuplicate on Bar { field }\`;
+const frag2 = gql\`fragment TestDuplicate on Bar { field }\`;
+const query = gql\`{ bar { fieldOne ...TestDuplicate } } \${frag1} \${frag2}\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const frag1 = {
+  "kind": "Document",
+  "definitions": [{
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "TestDuplicate"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "Bar"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "field"
+        },
+        "arguments": [],
+        "directives": []
+      }]
+    }
+  }],
+  "loc": {
+    "start": 0,
+    "end": 39,
+    "source": {
+      "body": "fragment TestDuplicate on Bar { field }",
+      "name": "GraphQL request",
+      "locationOffset": {
+        "line": 1,
+        "column": 1
+      }
+    }
+  }
+};
+const frag2 = {
+  "kind": "Document",
+  "definitions": [{
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "TestDuplicate"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "Bar"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "field"
+        },
+        "arguments": [],
+        "directives": []
+      }]
+    }
+  }],
+  "loc": {
+    "start": 0,
+    "end": 39,
+    "source": {
+      "body": "fragment TestDuplicate on Bar { field }",
+      "name": "GraphQL request",
+      "locationOffset": {
+        "line": 1,
+        "column": 1
+      }
+    }
+  }
+};
+const query = {
+  "kind": "Document",
+  "definitions": [{
+    "kind": "OperationDefinition",
+    "operation": "query",
+    "variableDefinitions": [],
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "bar"
+        },
+        "arguments": [],
+        "directives": [],
+        "selectionSet": {
+          "kind": "SelectionSet",
+          "selections": [{
+            "kind": "Field",
+            "name": {
+              "kind": "Name",
+              "value": "fieldOne"
+            },
+            "arguments": [],
+            "directives": []
+          }, {
+            "kind": "FragmentSpread",
+            "name": {
+              "kind": "Name",
+              "value": "TestDuplicate"
+            },
+            "directives": []
+          }]
+        }
+      }]
+    }
+  }].concat(frag1.definitions, frag2.definitions).reduce((acc, definition) => definition.kind !== "FragmentDefinition" || acc.find(curDef => curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
+  "loc": {
+    "start": 0,
+    "end": 39,
+    "source": {
+      "body": "{ bar { fieldOne ...TestDuplicate } }  ",
+      "name": "GraphQL request",
+      "locationOffset": {
+        "line": 1,
+        "column": 1
+      }
+    }
+  }
+};
+
+`;
+
 exports[`macros [gql] with fragment: [gql] with fragment 1`] = `
 
 import { gql } from 'graphql.macro';
@@ -114,7 +262,7 @@ const query = {
         }
       }]
     }
-  }].concat(userFragment.definitions),
+  }].concat(userFragment.definitions).reduce((acc, definition) => definition.kind !== "FragmentDefinition" || acc.find(curDef => curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
   "loc": {
     "start": 0,
     "end": 82,
