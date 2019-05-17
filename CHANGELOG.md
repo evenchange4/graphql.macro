@@ -1,4 +1,10 @@
-## Unreleased (2019-02-25)
+## Unreleased (2019-05-17)
+
+## 1.4.0 (2019-05-17)
+
+- 1.4.0 ([ad1c3ae](https://github.com/evenchange4/graphql.macro/commit/ad1c3ae))
+- feat: add support for jsconfig.json include option (#93) ([f53ff1e](https://github.com/evenchange4/graphql.macro/commit/f53ff1e)), closes [#93](https://github.com/evenchange4/graphql.macro/issues/93)
+- docs(CHANGELOG): release 1.3.5 ([7b6bede](https://github.com/evenchange4/graphql.macro/commit/7b6bede))
 
 ## <small>1.3.5 (2019-02-25)</small>
 
