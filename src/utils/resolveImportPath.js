@@ -4,6 +4,13 @@ import fs from 'fs';
 
 const CMD = fs.realpathSync(process.cwd());
 
+const jsconfigPath = path.resolve(CMD, 'jsconfig.json');
+let jsconfigInclude;
+if (fs.existsSync(jsconfigPath)) {
+  const jsconfig = JSON.parse(fs.readFileSync(jsconfigPath, 'utf8'));
+  jsconfigInclude = jsconfig.include ? jsconfig.include[0] : null;
+}
+
 const resolveImportPath = ({
   filename,
   relativePath,
@@ -17,7 +24,7 @@ const resolveImportPath = ({
 
   const resolvedPath = path.resolve(
     CMD,
-    process.env.NODE_PATH || '.',
+    jsconfigInclude || process.env.NODE_PATH || '.',
     relativePath,
   );
   if (fs.existsSync(resolvedPath)) {

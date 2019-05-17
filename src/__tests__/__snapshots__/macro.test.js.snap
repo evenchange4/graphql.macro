@@ -491,6 +491,58 @@ const query = {
 
 `;
 
+exports[`macros [loader] with absolute path and jsconfig include property: [loader] with absolute path and jsconfig include property 1`] = `
+
+import { loader } from 'graphql.macro';
+const query = loader('__tests__/fixtures/simpleFragment.graphql');
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const query = {
+  "kind": "Document",
+  "definitions": [{
+    "kind": "FragmentDefinition",
+    "name": {
+      "kind": "Name",
+      "value": "UserEntry1"
+    },
+    "typeCondition": {
+      "kind": "NamedType",
+      "name": {
+        "kind": "Name",
+        "value": "User"
+      }
+    },
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [{
+        "kind": "Field",
+        "name": {
+          "kind": "Name",
+          "value": "firstName"
+        },
+        "arguments": [],
+        "directives": []
+      }]
+    }
+  }],
+  "loc": {
+    "start": 0,
+    "end": 44,
+    "source": {
+      "body": "fragment UserEntry1 on User {\\n  firstName\\n}\\n",
+      "name": "GraphQL request",
+      "locationOffset": {
+        "line": 1,
+        "column": 1
+      }
+    }
+  }
+};
+
+`;
+
 exports[`macros [loader] with absolute path: [loader] with absolute path 1`] = `
 
 import { loader } from 'graphql.macro';
