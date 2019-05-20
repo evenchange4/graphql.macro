@@ -1,4 +1,10 @@
-## Unreleased (2019-05-17)
+## Unreleased (2019-05-20)
+
+## <small>1.4.1 (2019-05-20)</small>
+
+- 1.4.1 ([9d6c15a](https://github.com/evenchange4/graphql.macro/commit/9d6c15a))
+- fix: remove deduplicate fragments (fix #90) (#94) ([e406153](https://github.com/evenchange4/graphql.macro/commit/e406153)), closes [#90](https://github.com/evenchange4/graphql.macro/issues/90) [#94](https://github.com/evenchange4/graphql.macro/issues/94) [#90](https://github.com/evenchange4/graphql.macro/issues/90)
+- docs(CHANGELOG): release 1.4.0 ([87c5b9b](https://github.com/evenchange4/graphql.macro/commit/87c5b9b))
 
 ## 1.4.0 (2019-05-17)
 
