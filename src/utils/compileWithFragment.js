@@ -3,6 +3,9 @@ import gqlTag from 'graphql-tag';
 import serialize from 'babel-literal-to-ast';
 import template from '@babel/template';
 
+/**
+ * ref: https://github.com/gajus/babel-plugin-graphql-tag/blob/35edbae44990bf20be2de7139dc0ce5843f70bff/src/index.js#L25
+ */
 const uniqueFn = template.ast(`
   (acc, definition) =>
     definition.kind !== "FragmentDefinition" ||
