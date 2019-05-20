@@ -15,12 +15,13 @@
     "test": "NODE_ENV='test' jest --coverage",
     "test:watch": "npm run test -- --watch",
     "flow": "flow",
-    "flow-coverage": "hsu-scripts flow --threshold 71",
+    "flow-coverage": "hsu-scripts flow --threshold 70",
     "eslint": "eslint ./",
     "format": "prettier --write '**/*.{js,json,md,css,yaml,yml}' '*.{js,json,md,css,yaml,yml}'",
     "changelog": "conventional-changelog --infile ./CHANGELOG.md --same-file --release-count 0 --output-unreleased"
   },
   "dependencies": {
+    "@babel/template": "^7.4.4",
     "babel-literal-to-ast": "^2.1.0",
     "babel-plugin-macros": "^2.5.0",
     "graphql-tag": "^2.10.1"

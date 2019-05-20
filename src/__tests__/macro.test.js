@@ -55,6 +55,15 @@ pluginTester({
         \`;
       `,
     },
+    '[gql] should handle duplicated fragments (issue#90)': {
+      error: false,
+      code: `
+        import { gql } from '../macro';
+        const frag1 = gql\`fragment TestDuplicate on Bar { field }\`;
+        const frag2 = gql\`fragment TestDuplicate on Bar { field }\`;
+        const query = gql\`{ bar { fieldOne ...TestDuplicate } } $\{frag1} $\{frag2}\`;
+      `,
+    },
     '[loader] without fragment': {
       error: false,
       code: `
