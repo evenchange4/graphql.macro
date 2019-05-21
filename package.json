@@ -1,6 +1,6 @@
 {
   "name": "graphql.macro",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "index.d.ts",
