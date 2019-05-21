@@ -131,7 +131,7 @@ const query = {
         }
       }]
     }
-  }].concat(frag1.definitions, frag2.definitions).reduce((acc, definition) => definition.kind !== "FragmentDefinition" || acc.find(curDef => curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
+  }].concat(frag1.definitions, frag2.definitions).reduce((acc, definition) => definition.kind === 'FragmentDefinition' && acc.find(curDef => curDef.kind === 'FragmentDefinition' && curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
   "loc": {
     "start": 0,
     "end": 39,
@@ -262,7 +262,7 @@ const query = {
         }
       }]
     }
-  }].concat(userFragment.definitions).reduce((acc, definition) => definition.kind !== "FragmentDefinition" || acc.find(curDef => curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
+  }].concat(userFragment.definitions).reduce((acc, definition) => definition.kind === 'FragmentDefinition' && acc.find(curDef => curDef.kind === 'FragmentDefinition' && curDef.name.value === definition.name.value) ? acc : acc.concat(definition), []),
   "loc": {
     "start": 0,
     "end": 82,

@@ -4,12 +4,17 @@ import serialize from 'babel-literal-to-ast';
 import template from '@babel/template';
 
 /**
+ * TODO: Reduce runtime to improve performance
  * ref: https://github.com/gajus/babel-plugin-graphql-tag/blob/35edbae44990bf20be2de7139dc0ce5843f70bff/src/index.js#L25
  */
 const uniqueFn = template.ast(`
   (acc, definition) =>
-    definition.kind !== "FragmentDefinition" ||
-    acc.find(curDef => curDef.name.value === definition.name.value)
+    definition.kind === 'FragmentDefinition' &&
+    acc.find(
+      curDef =>
+        curDef.kind === 'FragmentDefinition' &&
+        curDef.name.value === definition.name.value,
+    )
       ? acc
       : acc.concat(definition)
 `);
