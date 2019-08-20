@@ -1226,14 +1226,14 @@ babel-plugin-syntax-object-rest-spread@^6.8.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
   integrity sha1-/WU28rzhODb/o6VFjEkDpZe7O/U=
 
-babel-plugin-tester@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-6.0.0.tgz#91483381e65f48ea717320a30a9182a441e3fe18"
-  integrity sha512-vzR8l3w9OlXSv6XmdTHu1qpT4i4/y7sK/g0mH1FusPIK7fPd8PYgkzSfuHpLp0JgQzY/LTsmxkSIXfTyfjZ9Ug==
+babel-plugin-tester@6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-6.5.0.tgz#2f6e8debc1a79421f2cc90375bc10cff3aafe064"
+  integrity sha512-VaJVB2FKRAm3nheEUnX1kpQE58bM8F+gNYWldYVhG5Phrur1IoUOQb6MPiVpz+KAJoJMyuW5e+ooLp/KSdrePQ==
   dependencies:
     common-tags "^1.4.0"
     invariant "^2.2.2"
-    lodash.merge "^4.6.0"
+    lodash.mergewith "^4.6.0"
     path-exists "^3.0.0"
     strip-indent "^2.0.0"
 
@@ -4408,10 +4408,10 @@ lodash._reinterpolate@~3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
-lodash.merge@^4.6.0:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
-  integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
+lodash.mergewith@^4.6.0:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
