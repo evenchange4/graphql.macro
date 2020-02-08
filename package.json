@@ -29,7 +29,7 @@
   "devDependencies": {
     "ast-pretty-print": "2.0.1",
     "babel-plugin-tester": "6.0.0",
-    "codecov": "3.2.0",
+    "codecov": "3.6.5",
     "conventional-changelog-cli": "2.0.12",
     "eslint": "5.14.1",
     "flow-bin": "0.93.0",
