@@ -2,13 +2,20 @@
 import path from 'path';
 import fs from 'fs';
 
+const CONFIG_FILENAMES = ['jsconfig.json', 'tsconfig.json'];
 const CMD = fs.realpathSync(process.cwd());
 
-const jsconfigPath = path.resolve(CMD, 'jsconfig.json');
+const configPaths = CONFIG_FILENAMES.map(filename =>
+  path.resolve(CMD, filename),
+).filter(actPath => fs.existsSync(actPath));
 let jsconfigInclude;
-if (fs.existsSync(jsconfigPath)) {
-  const jsconfig = JSON.parse(fs.readFileSync(jsconfigPath, 'utf8'));
+if (configPaths.length === 1) {
+  const jsconfig = JSON.parse(fs.readFileSync(configPaths[0], 'utf8'));
   jsconfigInclude = jsconfig.include ? jsconfig.include[0] : null;
+} else if (configPaths.length > 1) {
+  throw new Error(
+    'You have both a tsconfig.json and a jsconfig.json. If you are using TypeScript please remove your jsconfig.json file.',
+  );
 }
 
 const resolveImportPath = ({
