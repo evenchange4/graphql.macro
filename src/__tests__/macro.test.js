@@ -114,6 +114,52 @@ pluginTester({
         );
       },
     },
+    '[loader] with absolute path and tsconfig include property': {
+      error: false,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('__tests__/fixtures/simpleFragment.graphql');
+      `,
+      setup: () => {
+        fs.symlinkSync(
+          'src/__tests__/fixtures/tsconfig.json',
+          path.resolve(fs.realpathSync(process.cwd()), 'tsconfig.json'),
+          'file',
+        );
+      },
+      teardown: () => {
+        fs.unlinkSync(
+          path.resolve(fs.realpathSync(process.cwd()), 'tsconfig.json'),
+        );
+      },
+    },
+    '[loader] error with absolute path and both jsconfig and tsconfig files': {
+      error: true,
+      code: `
+        import { loader } from '../macro';
+        const query = loader('__tests__/fixtures/simpleFragment.graphql');
+      `,
+      setup: () => {
+        fs.symlinkSync(
+          'src/__tests__/fixtures/jsconfig.json',
+          path.resolve(fs.realpathSync(process.cwd()), 'jsconfig.json'),
+          'file',
+        );
+        fs.symlinkSync(
+          'src/__tests__/fixtures/tsconfig.json',
+          path.resolve(fs.realpathSync(process.cwd()), 'tsconfig.json'),
+          'file',
+        );
+      },
+      teardown: () => {
+        fs.unlinkSync(
+          path.resolve(fs.realpathSync(process.cwd()), 'jsconfig.json'),
+        );
+        fs.unlinkSync(
+          path.resolve(fs.realpathSync(process.cwd()), 'tsconfig.json'),
+        );
+      },
+    },
     '[loader] with nested circular fragments': {
       error: false,
       code: `
