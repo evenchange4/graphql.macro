@@ -13,7 +13,7 @@
 ## Installation
 
 ```sh
-$ yarn add graphql.macro
+yarn add graphql.macro
 ```
 
 _Note: You'll need to install and configure [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) if you haven't already._
@@ -75,24 +75,24 @@ const query = {
 - yarn >= 1.13.0
 
 ```sh
-$ yarn install --pure-lockfile
+yarn install --pure-lockfile
 ```
 
 ## Test
 
 ```sh
-$ yarn run format
-$ yarn run eslint
-$ yarn run flow
-$ yarn run test:watch
-$ yarn run build
+yarn run format
+yarn run eslint
+yarn run flow
+yarn run test:watch
+yarn run build
 ```
 
 ## Publish
 
 ```bash
-$ npm version patch
-$ npm run changelog
+npm version patch
+npm run changelog
 git commit & push
 ```
 
