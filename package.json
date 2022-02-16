@@ -24,7 +24,7 @@
     "@babel/template": "^7.4.4",
     "babel-literal-to-ast": "^2.1.0",
     "babel-plugin-macros": "^2.5.0",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
     "ast-pretty-print": "2.0.1",
