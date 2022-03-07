@@ -30,7 +30,7 @@
     "ast-pretty-print": "2.0.1",
     "babel-plugin-tester": "6.0.0",
     "codecov": "3.2.0",
-    "conventional-changelog-cli": "2.0.12",
+    "conventional-changelog-cli": "2.2.2",
     "eslint": "5.14.1",
     "flow-bin": "0.93.0",
     "graphql": "14.1.1",
